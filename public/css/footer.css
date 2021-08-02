@@ -1,0 +1,158 @@
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    background-color:#3f3f3f;
+    color: snow;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#first{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#contact {
+    display: none;
+}
+#first-main{
+    display: flex;
+    flex-direction: column;
+    flex:1 0 100%;
+    justify-content:center;
+    align-items: center;
+}
+#first-main a{
+    text-decoration: none;
+    color: snow;
+    margin-bottom: 0.5rem;
+    transition: all .3s ease;
+}
+#first-main a:hover{
+    color: #18a7ad;
+}
+#first-blog{
+    margin-top: 1rem;
+    border-top: 0.25rem solid #18a7ad;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+#first-blog h2{
+    margin-bottom: 1rem;
+}
+#first-blog nav{
+    flex:1 0 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+#first-blog nav a{
+    color:#18a7ad;
+    font-size: 2rem;
+    transition: all .3s ease;
+}
+#first-blog nav a:hover{
+    color: snow;
+}
+#first-blog form fieldset{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    
+}
+#first-blog form input{
+    border: none;
+    outline: none;
+    padding: 0.25rem;
+    border-radius: 0.15rem;
+    margin-right: 0.25rem;
+}
+#first-blog form button{
+    border: none;
+    border-radius: 0.15rem;
+    padding: 0.25rem;
+    background-color: #18a7ad;
+    color: snow;
+    transition: all .3s ease-in-out;
+}
+#first-blog form button:hover{
+    color: #18a7ad;
+    background-color: snow;
+}
+
+#last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+    footer{
+        padding: 1.5rem;
+    }
+    #contact {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: 0 0 25%;
+    }
+    #contact h2{
+        margin-bottom: 1rem;
+        font-size:1.5rem;
+    }
+    #contact h3{
+        margin-bottom: 0.25rem;
+        font-size:1.3rem;
+    }
+    #contact h3 i{
+        margin-right: 0.5rem;
+        color: #18a7ad;
+    }
+
+    #first{
+       justify-content: space-between; 
+        align-items: flex-start;
+    }
+    #first-main{
+        flex: 0 0 25%; 
+    }
+    #first-main a{
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+    #first-blog{
+        flex: 0 0 25%;
+        border: none;
+        margin-top: 0;
+        padding-top: 0;
+        text-align: center;
+    }
+    #first-blog form fieldset{
+        justify-content: center;
+        align-items:center;
+    }
+    #first-blog form button{
+        margin:0;
+    }
+    #first-blog form input{
+        margin:0;
+
+    }
+    #first-blog h2{
+        font-size: 1.5rem;
+    }
+    #last{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    #last span{
+        color: #18a7ad;
+    }
+}

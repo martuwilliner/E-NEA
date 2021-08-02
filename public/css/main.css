@@ -24,7 +24,7 @@ main{
 }
 
 #banner article{
-    flex: 1 0 auto;
+    flex: 1 0 100%;
     background-color: rgba(28, 28, 28, 0.7);
     align-self: stretch;
     display: flex;
@@ -71,5 +71,59 @@ main{
     }
     #banner article a:hover{
         background-color: rgba(24, 168, 173, 0.7);
+    }
+}
+
+#icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 1rem;
+}
+#icons article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 0.2rem solid #18a7ad;
+    flex: 1 0 100%;
+    padding: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+#icons article i{
+    color: #18a7ad;
+    font-size: 2rem;
+}
+#icons a{
+    text-decoration: none;
+    color: #3f3f3f;
+    margin-top: 0.5rem;
+}
+
+
+@media screen and (min-width: 1200px) {
+    #icons{
+        justify-content:space-around;
+        align-items: flex-start;
+    }
+    #icons article{
+        flex: 0 0 25%;
+    }
+    #icons article i{
+        font-size: 4rem;
+        margin-top: 1rem;
+    }
+    #icons article a{
+        font-size:1.5rem;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        transition: all .3s ease-in-out;
+    }
+    #icons article a:hover{
+        border: 0.25rem solid #18a7ad;
+        color: rgba(24, 167, 173, 0.7);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
     }
 }
