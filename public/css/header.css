@@ -1,0 +1,97 @@
+header{
+    display: flex;
+    flex-flow: row wrap;
+    height: 10vh; /* ESTA ES LA ALTURA DEL HEADER  */
+    background-color: #18a7ad;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+header img{
+    max-width: 100%;
+}
+#logo figure{
+    width: 100%;
+    /* flex: 1 0 auto; */ /* 1 es que ocupe todo lo el ancho dispo. 0 que no se corte y auto es que el ancho sea el justito*/
+}
+#logo{
+    width:10vh;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#menu{
+    display: none;
+}
+
+#menu:target{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(28, 28, 28, 0.7);
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+#menu:target a{
+    text-decoration: none;
+    margin-bottom: 0.8rem;
+    color:snow;
+    font-size: 1.7rem;
+    transition: all .3s ease;
+}
+#menu:target a:not([href="#"]):hover{ /* esto hace que se aplique a los que no tienen en href # como la X */
+    color:#18a7ad;
+}
+#burguer {
+    color: white;
+    align-self: center;
+    position: absolute;
+    right: 5vw;
+    font-size: 1.5rem; 
+}
+
+
+
+/* Media */
+@media screen and (min-width: 768px){
+    header{
+        justify-content: space-between;
+        
+    }
+    #burguer, #close{
+        display: none;
+    }
+    #menu{
+        display: flex;
+        align-items: center;
+    }
+    #menu a{
+        text-decoration: none;
+        color:snow;
+        font-size: 1.1rem;
+        transition: all .3s ease;
+        margin-right: 0.6rem;
+        
+    }
+    #menu a:hover{
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    header{
+        height:12vh;
+    }
+    #logo{
+        width: 12vh;
+    }
+    #menu a{
+        font-size:1.2rem;
+        margin-right:1.8rem;
+        
+    }
+}

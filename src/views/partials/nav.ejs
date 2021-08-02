@@ -1,0 +1,18 @@
+<nav class="merriweather-regular"id="menu">
+    <a href="#" id="close">
+        <i class="fas fa-times"></i>
+    </a>
+    <% if (locals.user != undefined && locals.user != null) { %>
+    <% if (locals.user.admin) { %>
+        <!-- VER TURNOS O PUBLICAR NOTAS EN EL BLOG  -->
+    <% } else { %> 
+        <!-- podria haber reserva de turnos / visitar blog EN EL ELSE DE ADMIN -->   
+    <% } %> 
+    <% } else { %>
+        <a href="/nosotros">Nosotros</a>
+        <a href="/servicios">Servicios</a>
+        <a href="/equipo">Nuestro equipo</a>
+        <a href="/contacto">Contacto</a>
+        <a href="/usuario/ingresar">Ingresar</a>
+    <% } %>
+</nav>
